@@ -1,13 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-
-const funcion = elemento => elemento+2;
-const exaple = <div>
-  <h1>Hola paulis____ {funcion(2)}</h1>
-  </div>;
-
+import Badge from './components/Badge';
+import '../node_modules/bootstrap/dist/css/bootstrap.css'
+import './global.css'
 
 const container = document.getElementById('app');
-ReactDOM.render(exaple , container);
+ReactDOM.render(<Badge />, container);
 
