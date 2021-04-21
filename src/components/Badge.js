@@ -1,7 +1,7 @@
 import React from 'react';
-import './style/main.css'
+import './style/badge.css'
 import confLogo from '../images/badge-header.svg';
-import avatar from '../images/avatar.jpeg'
+import avatar from '../images/avatar.jpeg';
 
 
 class Badge extends React.Component {
@@ -10,17 +10,17 @@ class Badge extends React.Component {
         <div className= "Badge">
             <header className = "Badge_header">
 
-               <a href="../../public/index.html"><img src = {confLogo} alt = "Logo de la conferencia"/></a> 
+               <img src = {confLogo} alt = "Logo de la conferencia"/>
 
             </header>
             <main>
                 <div className = "Badge_section-name">
                     <img className = "Badge_avatar" src = { avatar } alt = "Avatar" />
-                    <h1>Diego <br/> Aguirre</h1>
+                    <h1>{this.props.firstName} <br/>{this.props.lastName}</h1>
                 </div>
                 <div className = "Badge_section-info">
-                    <h3>Frontend Developer</h3>
-                    <a href = "#">@diegoaguirre</a>
+                    <h3>{this.props.jobTitle}</h3>
+                    <a href = "https://github.com/tenjodiego961" className = "Badge_ancla">{ this.props.github }</a>
                 </div>
             </main>
             <footer className = "Badge_footer">

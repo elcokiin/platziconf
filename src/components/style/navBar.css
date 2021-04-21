@@ -1,0 +1,17 @@
+.navBar {
+    width: 100%;
+    padding: 0.5rem 0;
+    background-color: #1C3643;
+}
+.navBar_logo {
+    margin-right: 0.5rem;
+}
+.navBar_brand {
+    color:#999;
+}
+.navBar_ancla:hover {
+    text-decoration: none;
+}
+.navBar_conf {
+    color: #f3f3f3;
+}

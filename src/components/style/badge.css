@@ -13,6 +13,9 @@
     display: flex;
     justify-content: center;
   }
+  .Badge_ancla:hover {
+    text-decoration: none;
+  }
   
   .Badge_section-name {
     display: flex;
