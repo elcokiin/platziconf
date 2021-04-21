@@ -10,6 +10,25 @@ import './style/BadgeNew.css';
 
 
 class BadgeNew extends React.Component {
+    state = { form: {
+        firstName: '',
+        lastName: '',
+        email: '',
+        jobTitle: '',
+        github: '',
+    } };
+    handleChange = e => {
+        // const nextForm = this.state.form;
+        // nextForm[e.target.name] = e.target.value;
+        
+        this.setState({
+            // form: nextForm,
+            form: {
+            ...this.state.form,
+            [e.target.name]: e.target.value,}
+        })
+    }
+
     render(){
         return(
             <div>
@@ -20,13 +39,13 @@ class BadgeNew extends React.Component {
                 <div className = "container">
                     <div className = "row">
                         <div className = "col-6">
-                            <Badge firstName = "Diego"
-                            lastName = "Tenjo" 
-                            github = "tenjodiego961"
-                            jobTitle = "Frontend Developer"/>
+                            <Badge firstName = {this.state.form.firstName}
+                            lastName = {this.state.form.lastName} 
+                            github = {this.state.form.github}
+                            jobTitle = {this.state.form.jobTitle}/>
                         </div>
                         <div className = "col-6">
-                            <BadgeForm />
+                            <BadgeForm onChange = {this.handleChange} formValues = {this.state.form}/>
                         </div>
                     </div>
                 </div>
