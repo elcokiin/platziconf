@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 import NavBar from '../components/NavBar';
 import BadgeList from '../components/BadgesList'
@@ -55,7 +57,7 @@ class Badge extends React.Component {
                     </div>
                         <div className="Badges__container">
                             <div className="Badges__buttons">
-                                <a href="Badge/new" className="btn btn-primary">New Badge</a>
+                                <Link to="badge/new" className="btn btn-primary">New Badge</Link>
                             </div>
                         </div>
 
